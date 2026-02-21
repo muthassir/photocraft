@@ -42,8 +42,6 @@ const Header = () => {
 
   const navLinks = [
     { path: '/', name: 'Home', icon: <FiHome /> },
-    { path: '/frames', name: 'Photo Frames', icon: <FiImage /> },
-    { path: '/walls', name: 'Wall Photos', icon: <FiGrid /> },
     { path: '/designs', name: 'Design Photos', icon: <FiPenTool /> },
   ];
 

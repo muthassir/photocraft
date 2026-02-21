@@ -11,8 +11,6 @@ import Footer from './components/layouts/Footer';
 
 // Pages
 import Home from './pages/Home';
-import Frames from './pages/Frames'
-import Walls from './pages/Walls';
 import Designs from './pages/Designs';
 import About from './pages/About';
 import Upload from './pages/Upload';
@@ -31,8 +29,6 @@ function App() {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/frames" element={<Frames />} />
-              <Route path="/walls" element={<Walls />} />
               <Route path="/designs" element={<Designs />} />
               <Route path="/about" element={<About />} />
               <Route path="/upload" element={<Upload />} />

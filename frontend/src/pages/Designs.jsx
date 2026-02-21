@@ -7,6 +7,12 @@ import {
   FiEdit, FiChrome, FiLayers, FiUser, FiCalendar,
   FiAward, FiTrendingUp
 } from 'react-icons/fi';
+import polaroid from '../assets/polaroid.png'
+import collage from '../assets/collage-1.jpg'
+import singleFrame from '../assets/frame-single.jpg'
+import valentines from '../assets/edit-frame-1.jpg'
+import heart from '../assets/heart.jpg'
+import timeline from '../assets/cp-frame-timeline-2.jpg'
 
 const Designs = () => {
   const [view, setView] = useState('grid');
@@ -25,7 +31,6 @@ const Designs = () => {
     { id: 'birthday', name: 'Birthday Designs', icon: '🎂' },
     { id: 'anniversary', name: 'Anniversary Designs', icon: '💑' },
     { id: 'baby', name: 'Baby Shower', icon: '👶' },
-    { id: 'graduation', name: 'Graduation', icon: '🎓' },
     { id: 'holiday', name: 'Holiday & Christmas', icon: '🎄' },
     { id: 'album', name: 'Photo Album', icon: '📷' },
     { id: 'collage', name: 'Collage Templates', icon: '🖼️' },
@@ -50,14 +55,11 @@ const Designs = () => {
     { id: 'wedding', name: 'Wedding' },
     { id: 'anniversary', name: 'Anniversary' },
     { id: 'baby-shower', name: 'Baby Shower' },
-    { id: 'graduation', name: 'Graduation' },
     { id: 'holiday', name: 'Holiday' },
     { id: 'valentines', name: "Valentine's Day" },
     { id: 'mothers-day', name: "Mother's Day" },
     { id: 'fathers-day', name: "Father's Day" },
-    { id: 'diwali', name: 'Diwali' },
-    { id: 'eid', name: 'Eid' },
-    { id: 'new-year', name: 'New Year' },
+    { id: 'polaroid', name: 'polaroid' },
   ];
 
   const complexities = [
@@ -68,66 +70,11 @@ const Designs = () => {
   ];
 
   const designs = [
-    {
-      id: 1,
-      name: "Elegant Wedding Album",
-      description: "Beautiful wedding album design with floral accents and gold foil details",
-      price: 1499,
-      originalPrice: 2499,
-      discount: 40,
-      rating: 4.9,
-      reviews: 234,
-      category: "wedding",
-      theme: "glamorous",
-      occasion: "wedding",
-      complexity: "complex",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
-      badge: "Best Seller",
-      downloads: 1234,
-      designer: "Elena Rodriguez",
-      inStock: true
-    },
-    {
-      id: 2,
-      name: "Vintage Birthday Collage",
-      description: "Retro-inspired birthday collage template with polaroid-style frames",
-      price: 699,
-      originalPrice: 1299,
-      discount: 46,
-      rating: 4.7,
-      reviews: 156,
-      category: "birthday",
-      theme: "vintage",
-      occasion: "birthday",
-      complexity: "medium",
-      image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=500",
-      badge: "Popular",
-      downloads: 892,
-      designer: "Mike Chen",
-      inStock: true
-    },
-    {
-      id: 3,
-      name: "Modern Minimalist Card",
-      description: "Clean and simple greeting card design with geometric patterns",
-      price: 299,
-      originalPrice: 599,
-      discount: 50,
-      rating: 4.5,
-      reviews: 89,
-      category: "card",
-      theme: "minimalist",
-      occasion: "all",
-      complexity: "simple",
-      image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=500",
-      badge: "Budget Pick",
-      downloads: 567,
-      designer: "Sarah Johnson",
-      inStock: true
-    },
+  
+  
     {
       id: 4,
-      name: "Bohemian Baby Shower",
+      name: "Couple Single Frame",
       description: "Dreamy boho-inspired baby shower design with dream catchers and feathers",
       price: 899,
       originalPrice: 1499,
@@ -138,7 +85,7 @@ const Designs = () => {
       theme: "bohemian",
       occasion: "baby-shower",
       complexity: "medium",
-      image: "https://images.unsplash.com/photo-1519823551278-64ac92734ab2?w=500",
+      image: singleFrame,
       badge: "Trending",
       downloads: 678,
       designer: "Priya Patel",
@@ -157,7 +104,7 @@ const Designs = () => {
       theme: "artistic",
       occasion: "all",
       complexity: "complex",
-      image: "https://images.unsplash.com/photo-1541562232579-512a21360020?w=500",
+      image: collage,
       badge: "Editor's Pick",
       downloads: 445,
       designer: "Alex Thompson",
@@ -176,29 +123,10 @@ const Designs = () => {
       theme: "rustic",
       occasion: "anniversary",
       complexity: "complex",
-      image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=500",
+      image: heart,
       badge: "Premium",
       downloads: 334,
       designer: "Emma Wilson",
-      inStock: true
-    },
-    {
-      id: 7,
-      name: "Graduation Cap Design",
-      description: "Celebration-worthy graduation design with cap and diploma elements",
-      price: 599,
-      originalPrice: 999,
-      discount: 40,
-      rating: 4.7,
-      reviews: 167,
-      category: "graduation",
-      theme: "modern",
-      occasion: "graduation",
-      complexity: "medium",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500",
-      badge: "Popular",
-      downloads: 789,
-      designer: "David Kim",
       inStock: true
     },
     {
@@ -214,7 +142,7 @@ const Designs = () => {
       theme: "artistic",
       occasion: "holiday",
       complexity: "simple",
-      image: "https://images.unsplash.com/photo-1606830733744-0ad778449672?w=500",
+      image: timeline,
       badge: "Seasonal",
       downloads: 1234,
       designer: "Maria Garcia",
@@ -233,7 +161,7 @@ const Designs = () => {
       theme: "glamorous",
       occasion: "valentines",
       complexity: "medium",
-      image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500",
+      image: valentines,
       badge: "Romantic",
       downloads: 892,
       designer: "Sophie Turner",
@@ -241,118 +169,25 @@ const Designs = () => {
     },
     {
       id: 10,
-      name: "Diwali Festival Design",
+      name: "Polaroid  Design",
       description: "Traditional Indian design with diyas, rangoli, and festive colors",
-      price: 799,
-      originalPrice: 1399,
+      price: 299,
+      originalPrice: 499,
       discount: 43,
       rating: 4.9,
       reviews: 212,
       category: "holiday",
       theme: "artistic",
-      occasion: "diwali",
+      occasion: "polaroid",
       complexity: "complex",
-      image: "https://images.unsplash.com/photo-1606741965938-5c00e298c3b0?w=500",
+      image: polaroid,
       badge: "Festival Special",
       downloads: 678,
       designer: "Rajesh Kumar",
       inStock: true
     },
-    {
-      id: 11,
-      name: "Mother's Day Memories",
-      description: "Heartfelt design for mom with floral patterns and warm sentiments",
-      price: 449,
-      originalPrice: 849,
-      discount: 47,
-      rating: 4.8,
-      reviews: 145,
-      category: "card",
-      theme: "vintage",
-      occasion: "mothers-day",
-      complexity: "simple",
-      image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=500",
-      badge: "Heartwarming",
-      downloads: 567,
-      designer: "Lisa Anderson",
-      inStock: true
-    },
-    {
-      id: 12,
-      name: "New Year's Eve Party",
-      description: "Glittering New Year design with countdown and celebration elements",
-      price: 599,
-      originalPrice: 1099,
-      discount: 45,
-      rating: 4.7,
-      reviews: 167,
-      category: "holiday",
-      theme: "glamorous",
-      occasion: "new-year",
-      complexity: "medium",
-      image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500",
-      badge: "Party Ready",
-      downloads: 445,
-      designer: "Chris Evans",
-      inStock: true
-    },
-    {
-      id: 13,
-      name: "Cartoon Kids Birthday",
-      description: "Fun and colorful design with cartoon characters for kids' birthdays",
-      price: 549,
-      originalPrice: 999,
-      discount: 45,
-      rating: 4.8,
-      reviews: 189,
-      category: "birthday",
-      theme: "cartoon",
-      occasion: "birthday",
-      complexity: "medium",
-      image: "https://images.unsplash.com/photo-1530103043960-721387c9161e?w=500",
-      badge: "Kids Favorite",
-      downloads: 734,
-      designer: "Tom Harris",
-      inStock: true
-    },
-    {
-      id: 14,
-      name: "Minimalist Album Cover",
-      description: "Clean and contemporary photo album cover with geometric shapes",
-      price: 899,
-      originalPrice: 1599,
-      discount: 44,
-      rating: 4.5,
-      reviews: 78,
-      category: "album",
-      theme: "minimalist",
-      occasion: "all",
-      complexity: "simple",
-      image: "https://images.unsplash.com/photo-1541701494587-c6a0c7a45ef8?w=500",
-      badge: "Modern",
-      downloads: 345,
-      designer: "John Smith",
-      inStock: true
-    },
-    {
-      id: 15,
-      name: "Eid Mubarak Design",
-      description: "Elegant Eid design with crescent moons and intricate patterns",
-      price: 699,
-      originalPrice: 1199,
-      discount: 42,
-      rating: 4.9,
-      reviews: 134,
-      category: "holiday",
-      theme: "artistic",
-      occasion: "eid",
-      complexity: "complex",
-      image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500",
-      badge: "Cultural",
-      downloads: 456,
-      designer: "Fatima Ahmed",
-      inStock: true
-    }
+   
+   
   ];
 
   // Filter designs based on selected filters
@@ -724,15 +559,10 @@ const Designs = () => {
                         </div>
                         <div className="flex items-center gap-1 text-xs text-base-content/60">
                           <FiTrendingUp />
-                          <span>{design.downloads} downloads</span>
+                          <span>{design.downloads} ordered</span>
                         </div>
                       </div>
 
-                      {/* Designer */}
-                      <div className="flex items-center gap-1 text-xs text-base-content/70 mt-1">
-                        <FiUser />
-                        <span>by {design.designer}</span>
-                      </div>
 
                       {/* Category Tags */}
                       <div className="flex flex-wrap gap-1 mt-2">
