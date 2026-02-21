@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, dark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter;
+}
+
+/* Custom theme - PhotoCraft */
+@layer base {
+  :root {
+    /* PhotoCraft Theme (light mode) */
+    --p: 199 95% 48%;  /* Primary - #0ea5e9 */
+    --pf: 199 89% 43%; /* Primary focus */
+    --pc: 0 0% 100%;   /* Primary content */
+    
+    --s: 32 95% 44%;   /* Secondary - #d97706 */
+    --sf: 32 100% 35%; /* Secondary focus */
+    --sc: 0 0% 100%;   /* Secondary content */
+    
+    --a: 152 76% 40%;  /* Accent - #10b981 */
+    --af: 152 75% 35%; /* Accent focus */
+    --ac: 0 0% 100%;   /* Accent content */
+    
+    --n: 220 13% 28%;  /* Neutral - #1f2937 */
+    --nf: 220 14% 23%; /* Neutral focus */
+    --nc: 0 0% 100%;   /* Neutral content */
+    
+    --b1: 0 0% 100%;   /* Base 100 - White */
+    --b2: 220 33% 98%; /* Base 200 - #f9fafb */
+    --b3: 220 14% 96%; /* Base 300 - #f3f4f6 */
+    --bc: 220 13% 28%; /* Base content */
+    
+    --in: 214 100% 57%;   /* Info - #3b82f6 */
+    --su: 152 76% 40%;    /* Success - #10b981 */
+    --wa: 32 95% 54%;     /* Warning - #f59e0b */
+    --er: 0 72% 61%;      /* Error - #ef4444 */
+    
+    /* Rounded corners */
+    --rounded-box: 1rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1.9rem;
+    
+    /* Button text */
+    --btn-text-case: none;
+    
+    /* Animation */
+    --animation-btn: 0.25s;
+    --animation-input: 0.2s;
+    
+    /* Effects */
+    --btn-focus-scale: 0.95;
+    --border-btn: 1px;
+    --tab-border: 1px;
+    --tab-radius: 0.5rem;
+  }
+
+  /* Dark mode variant of your custom theme */
+  [data-theme="photocrat-dark"] {
+    --p: 199 89% 58%;
+    --pf: 199 89% 48%;
+    --pc: 0 0% 100%;
+    
+    --s: 32 95% 54%;
+    --sf: 32 95% 44%;
+    --sc: 0 0% 100%;
+    
+    --a: 152 76% 45%;
+    --af: 152 76% 40%;
+    --ac: 0 0% 100%;
+    
+    --n: 220 14% 18%;
+    --nf: 220 14% 13%;
+    --nc: 0 0% 100%;
+    
+    --b1: 220 14% 13%;
+    --b2: 220 14% 18%;
+    --b3: 220 14% 23%;
+    --bc: 220 14% 98%;
+  }
+
+  /* Alternative theme: Creative Studio */
+  [data-theme="creative"] {
+    --p: 262 83% 58%;  /* Purple */
+    --pf: 262 83% 48%;
+    --s: 326 100% 64%; /* Pink */
+    --sf: 326 100% 54%;
+    --a: 182 100% 36%; /* Teal */
+    --af: 182 100% 31%;
+    /* ... rest similar */
+  }
+}
+
+@layer base {
+ 
+  body {
+    @apply bg-base-100 text-base-content;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+  }
+  
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary text-white border-0;
+  }
+  
+  .btn-gradient:hover {
+    @apply from-primary/90 to-secondary/90;
+  }
+  
+  /* Product card specific */
+  .product-card {
+    @apply card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300;
+  }
+  
+  .product-badge {
+    @apply absolute top-2 left-2 z-10;
+  }
+  
+  .product-image {
+    @apply relative h-64 overflow-hidden rounded-t-xl;
+  }
+  
+  .product-overlay {
+    @apply absolute inset-0 bg-black/40 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity;
+  }
+}
